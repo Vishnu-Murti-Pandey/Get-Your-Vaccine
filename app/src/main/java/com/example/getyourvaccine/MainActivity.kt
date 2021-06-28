@@ -1,10 +1,14 @@
 package com.example.getyourvaccine
 
 import android.app.DatePickerDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.getSystemService
 import com.example.getyourvaccine.databinding.ActivityMainBinding
 import java.util.*
 
@@ -26,6 +30,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.ibCalender.setOnClickListener{
 
+            closeKeyboard()
+
                 // Get Current Date
                 val c: Calendar = Calendar.getInstance()
                 mYear = c.get(Calendar.YEAR)
@@ -42,6 +48,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.searchButton.setOnClickListener {
+
+            closeKeyboard()
 
             postalCode = binding.etPostalAddress.text.toString()
             date = binding.etDate.text.toString()
@@ -61,8 +69,18 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("postal_code", postalCode)
                 intent.putExtra("date", date)
                 startActivity(intent)
+
             }
         }
+    }
+
+    private fun closeKeyboard() {
+        val view = this.currentFocus
+        if(view != null) {
+            val hideMe = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            hideMe.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+        }
+
     }
 
 }
