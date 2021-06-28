@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GetYourVaccine</string>
+    <string name="search">Search</string>
+    <string name="enter_your_postal_address">Enter Your Postal Address</string>
+    <string name="enter_your_pin">Enter Your Pin</string>
+    <string name="date">Date</string>
+    <string name="book_slot">Book Slot</string>
+    <string name="age_limit">Age Limit</string>
+    <string name="type">Type:</string>
+    <string name="available">Available</string>
+</resources>
