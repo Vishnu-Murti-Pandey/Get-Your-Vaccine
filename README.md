@@ -1,5 +1,5 @@
 # Get-Your-Vaccine
-An Applications which gives you information about slot availability of vaccine
+An Applications which gives you information about slot availability of covid vaccine
 
 # Overview
 This is a vaccine tracker android app which displays the details of vaccination centers with vaccine availibility. 
@@ -20,9 +20,6 @@ It ask user for their area pincode and pick the date on which user wants to chec
 
 # API Used
 Api from api setu:- https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=$pinCode&date=$date
-
-# For Downloading
-APK
 
 # Screenshots
 [screenshots](https://github.com/Vishnu-Murti-Pandey/Get-Your-Vaccine/tree/master/screenshots)
